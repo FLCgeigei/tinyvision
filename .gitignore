@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Local tooling
+.screenshots/
+.trae-html-share-packages/
+
+# Downloaded weights and data
+assets/vision_encoder/
+assets/pretrained/
+assets/outputs/
+assets/data/
+tinyvision-vlm/
+tinyvision-data/
+flcmind_hf/

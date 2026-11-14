@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tinyvision"
+version = "0.1.0"
+description = "TinyVision: a minimal vision-language model for learning"
+requires-python = ">=3.9"
+license = { text = "Apache-2.0" }
+dependencies = [
+    "torch>=2.0",
+    "transformers>=4.45",
+    "datasets>=3.0",
+    "pyarrow>=15.0",
+    "pillow",
+    "numpy",
+    "matplotlib",
+]
+
+[project.optional-dependencies]
+web = ["gradio>=5.0"]
+log = ["swanlab"]
+
+[project.scripts]
+tinyvision-chat = "tinyvision.cli.chat:main"
+tinyvision-web = "tinyvision.cli.web:main"
+tinyvision-train = "tinyvision.training.train:main"
+tinyvision-convert = "tinyvision.cli.convert:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]

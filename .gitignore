@@ -6,6 +6,7 @@ __pycache__/
 venv/
 
 # Local tooling
+.gh-config/
 .screenshots/
 .trae-html-share-packages/
 
